@@ -13,12 +13,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: .ruby-version
-          rubygems: 3.4.22
-          bundler-cache: true
+      - name: Setup
+        uses: ./.github/workflows/setup
 
   test:
     runs-on: ubuntu-latest
@@ -28,12 +24,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: .ruby-version
-          rubygems: 3.4.22
-          bundler-cache: true
+      - name: Setup
+        uses: ./.github/workflows/setup
 
       - name: Run tests
         env:
@@ -48,12 +40,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: .ruby-version
-          rubygems: 3.4.22
-          bundler-cache: true
+      - name: Setup
+        uses: ./.github/workflows/setup
 
       - name: Check Bundler version
         run: bundler --version
