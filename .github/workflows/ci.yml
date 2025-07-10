@@ -43,6 +43,12 @@ jobs:
       - name: Setup
         uses: ./.github/workflows/setup
 
+      - name: gem env
+        run: gem env
+
+      - name: gem list bundler
+        run: gem list bundler
+
       - name: Check Bundler version
         run: bundler --version
 
