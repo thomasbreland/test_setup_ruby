@@ -6,4 +6,5 @@ runs:
         with:
           ruby-version: .ruby-version
           rubygems: 3.4.22
+          bundler: Gemfile.lock
           bundler-cache: true
